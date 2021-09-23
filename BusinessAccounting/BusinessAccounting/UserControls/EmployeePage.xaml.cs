@@ -98,7 +98,7 @@ namespace BusinessAccounting.UserControls
                     new XParameter("@id", _employeesLoadedList[LbEmployees.SelectedIndex].Id));
                 if (r == null)
                 {
-                    ShowMessage("Сотрудник не найден.");
+                    ShowMessage("Employee не найден.");
                     return;
                 }
                 _openedEmployee = new Employee()
@@ -311,8 +311,8 @@ namespace BusinessAccounting.UserControls
             }
 
             var w = (MetroWindow)Parent.GetParentObject().GetParentObject();
-            var result = await w.ShowMessageAsync("Удалить запись?", 
-                string.Format("Дата: {1:dd MMMM yyyy}{0}Сумма: {2:C}{0}Комментарий: {3}",
+            var result = await w.ShowMessageAsync("Delete запись?", 
+                string.Format("Date: {1:dd MMMM yyyy}{0}Sum: {2:C}{0}A comment: {3}",
                 Environment.NewLine, record.Date, record.Sum, record.Comment), 
                 MessageDialogStyle.AffirmativeAndNegative);
 
@@ -332,7 +332,7 @@ namespace BusinessAccounting.UserControls
         private async Task<bool> AskAndDeleteEmployee(string question)
         {
             var w = (MetroWindow) Parent.GetParentObject().GetParentObject();
-            var result = await w.ShowMessageAsync("Удалить сотрудника?", question, MessageDialogStyle.AffirmativeAndNegative);
+            var result = await w.ShowMessageAsync("Delete сотрудника?", question, MessageDialogStyle.AffirmativeAndNegative);
             if (result == MessageDialogResult.Affirmative)
             {
                 if (DeleteEmployee())

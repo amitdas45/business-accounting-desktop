@@ -104,7 +104,7 @@ namespace BusinessAccounting
             for (var visual = this as Visual; visual != null; visual = VisualTreeHelper.GetParent(visual) as Visual)
             {
                 var window = visual as MetroWindow;
-                window?.ShowMessageAsync("Проблемка", text);
+                window?.ShowMessageAsync("Problem", text);
             }
         }
 
@@ -114,7 +114,7 @@ namespace BusinessAccounting
             {
                 if (!Directory.Exists(App.DatabasePath))
                 {
-                    ShowMessage($"Папка по адресу {App.DatabasePath} не найдена.");
+                    ShowMessage($"Folder by address {App.DatabasePath} not found.");
                     return;
                 }
 

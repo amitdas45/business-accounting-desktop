@@ -77,19 +77,19 @@ namespace BusinessAccounting.Integrations
             switch (progress.Status)
             {
                 case UploadStatus.Starting:
-                    status = "Начинаю загрузку...";
+                    status = "Start downloading...";
                     break;
                 case UploadStatus.NotStarted:
-                    status = "Загрузка не начата.";
+                    status = "The download has not started.";
                     break;
                 case UploadStatus.Uploading:
-                    status = "Загрузка...";
+                    status = "Loading...";
                     break;
                 case UploadStatus.Completed:
-                    status = "Завершено.";
+                    status = "Completed.";
                     break;
                 case UploadStatus.Failed:
-                    status = "Ошибка.";
+                    status = "Error.";
                     break;
             }
             UpdateStatus(status);
@@ -102,7 +102,7 @@ namespace BusinessAccounting.Integrations
 
         private void Upload_ResponseReceived(Google.Apis.Drive.v3.Data.File file)
         {
-            UpdateStatus(file.Name + " был успешно загружен.");
+            UpdateStatus(file.Name + " was loaded successfully.");
         }
     }
 }

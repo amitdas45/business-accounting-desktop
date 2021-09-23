@@ -160,8 +160,8 @@ namespace BusinessAccounting.UserControls
             }
 
             var w = (MetroWindow)Parent.GetParentObject().GetParentObject();
-            var result = await w.ShowMessageAsync("Удалить запись?", 
-                string.Format("Дата: {1:dd MMMM yyyy}{0}Сумма: {2:C}{0}Комментарий: {3}{0}Сотрудник: {4}",
+            var result = await w.ShowMessageAsync("Delete запись?", 
+                string.Format("Date: {1:dd MMMM yyyy}{0}Sum: {2:C}{0}A comment: {3}{0}Employee: {4}",
                 Environment.NewLine, record.Date, record.Sum, record.Comment, record.EmployeeFullName), 
                 MessageDialogStyle.AffirmativeAndNegative);
 

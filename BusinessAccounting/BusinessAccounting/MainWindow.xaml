@@ -28,8 +28,8 @@
 
     <controls:MetroWindow.RightWindowCommands>
         <controls:WindowCommands>
-            <Button Margin="0,5" Content="{StaticResource ImageFolder}" ToolTip="Открыть папку с базой данных" Click="OpenDbFolder_Click"/>
-            <Button Margin="0,5" Content="{StaticResource ImageBackup}" ToolTip="Сделать резервную копию базы данных" Click="MakeBackup_Click"/>
+            <Button Margin="0,5" Content="{StaticResource ImageFolder}" ToolTip="Open folder with database" Click="OpenDbFolder_Click"/>
+            <Button Margin="0,5" Content="{StaticResource ImageBackup}" ToolTip="Make a database backup" Click="MakeBackup_Click"/>
         </controls:WindowCommands>
     </controls:MetroWindow.RightWindowCommands>
 
@@ -66,9 +66,9 @@
                     </Grid.RowDefinitions>
                     <Label Grid.Row="0" Grid.Column="0" Content="Касса" HorizontalAlignment="Right" VerticalContentAlignment="Center"/>
                     <Button Grid.Row="0" Grid.Column="1" Height="64" Width="64" Focusable="False" Content="{StaticResource ImageCash}" HorizontalAlignment="Left" Click="MenuButtonCash_Click"/>
-                    <Label Grid.Row="1" Grid.Column="0" Content="Сотрудники" HorizontalAlignment="Right" VerticalContentAlignment="Center"/>
+                    <Label Grid.Row="1" Grid.Column="0" Content="Employees" HorizontalAlignment="Right" VerticalContentAlignment="Center"/>
                     <Button Grid.Row="1" Grid.Column="1" Height="64" Width="64" Focusable="False" Content="{StaticResource ImageMan}" HorizontalAlignment="Left" Click="MenuButtonEmployee_Click"/>
-                    <Label Grid.Row="2" Grid.Column="0" Content="Графики" HorizontalAlignment="Right" VerticalContentAlignment="Center"/>
+                    <Label Grid.Row="2" Grid.Column="0" Content="Charts" HorizontalAlignment="Right" VerticalContentAlignment="Center"/>
                     <Button Grid.Row="2" Grid.Column="1" Height="64" Width="64" Focusable="False" Content="{StaticResource ImageGraph}" HorizontalAlignment="Left" Click="MenuButtonGraphics_Click"/>
                 </Grid>
             </Border>
@@ -76,7 +76,7 @@
         <Button Height="64" Width="64" Focusable="False" Content="{StaticResource ImageMenu}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0"  ToolTip="Главное меню" Click="ButtonMenu_Click"/>
         <DockPanel Grid.Row="1" Name="dockPanel" Dock="Bottom" Visibility="{Binding Path=Status, Converter={StaticResource NullToVisibilityConverter}}">
             <StatusBar>
-                <Label Content="Статус резервного копирования:"/>
+                <Label Content="Backup status:"/>
                 <Label Name="lblStatus" Content="{Binding Path=Status}" />
             </StatusBar>
         </DockPanel>

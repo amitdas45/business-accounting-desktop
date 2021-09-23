@@ -106,7 +106,7 @@ namespace BusinessAccounting.UserControls
 
             _chart = new Chart();
 
-            var title = _chart.Titles.Add($"Сумма доходов и расходов за период {Environment.NewLine} с {startDate.ToShortDateString()} по {endDate.ToShortDateString()}");
+            var title = _chart.Titles.Add($"Sum доходов и расходов за период {Environment.NewLine} с {startDate.ToShortDateString()} по {endDate.ToShortDateString()}");
             title.Font = _titleFont;
 
             _chart.Legends.Add("Легенда").Title = "Легенда";
@@ -166,7 +166,7 @@ namespace BusinessAccounting.UserControls
 
             _chart.ChartAreas.Add("");
             _chart.ChartAreas[0].AxisX.Title = "Месяц";
-            _chart.ChartAreas[0].AxisY.Title = "Сумма";
+            _chart.ChartAreas[0].AxisY.Title = "Sum";
             MakeAreaZoomable(_chart.ChartAreas[0]);
 
             _chart.Series.Add("Доходы");
@@ -251,7 +251,7 @@ namespace BusinessAccounting.UserControls
 
             _chart.ChartAreas.Add("");
             _chart.ChartAreas[0].AxisX.Title = "Месяц";
-            _chart.ChartAreas[0].AxisY.Title = "Сумма";
+            _chart.ChartAreas[0].AxisY.Title = "Sum";
             MakeAreaZoomable(_chart.ChartAreas[0]);
 
             var startDate = new DateTime(date.Year, 1, 1, 0, 0, 0);
